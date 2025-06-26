@@ -1,23 +1,21 @@
 public class Aluno {
     String nome;
-    double nota1;
-    double nota2;
-    double nota3;
     int media;
+    double[] notas;
 
-    public Aluno(String nome,double nota1, double nota2, double nota3){
+    public Aluno(String nome, double[] notas) {
         this.nome = nome;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
+        this.notas = notas;
 
     }
 
-    public double calcularMedia (){
-        return (nota1 + nota2 + nota3) / 3;
+    public double calcularMedia() {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma/ notas.length;
     }
-
-
     public boolean passou (int mediaDigitada){
         this.media = mediaDigitada;
         return calcularMedia() >= mediaDigitada;
