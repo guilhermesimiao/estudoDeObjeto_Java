@@ -9,6 +9,9 @@ public class Main {
         System.out.println("digite o nome do aluno: ");
             String nome = scan.next();
 
+        System.out.println("Escreva a média manualmente: ");
+            int media = scan.nextInt();
+
         for (int i = 0; i < 3; i++){
             System.out.println("Digite a " + (i+1) + "° nota");
                 notas[i] = scan.nextDouble();
@@ -19,7 +22,7 @@ public class Main {
         System.out.println("Aluno: " + aluno.nome);
         System.out.println("Média: " + aluno.calcularMedia());
 
-        if (aluno.passou()){
+        if (aluno.passou(media)){
             System.out.println("Aluno aprovado!");
         }else {
             System.out.println("Aluno reprovado!");

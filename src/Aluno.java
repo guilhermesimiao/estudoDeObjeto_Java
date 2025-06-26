@@ -3,6 +3,7 @@ public class Aluno {
     double nota1;
     double nota2;
     double nota3;
+    int media;
 
     public Aluno(String nome,double nota1, double nota2, double nota3){
         this.nome = nome;
@@ -17,8 +18,9 @@ public class Aluno {
     }
 
 
-    public boolean passou (){
-        return calcularMedia() >= 6.0;
+    public boolean passou (int mediaDigitada){
+        this.media = mediaDigitada;
+        return calcularMedia() >= mediaDigitada;
     }
 }
 
